@@ -1,7 +1,48 @@
 @import "_fonts.scss";
+@import "_reset.scss";
 
+:root {
+	--red: #ff424e;
+	--blue: #00adef;
+	--black: black;
+	--yellow: #feed01;
 
+	--square-width: 10vw;
+}
 
 body {
 	font-family: HelveticaBlack;
+	background-color: var(--red);
+	font-size:1.6rem;
+	line-height: 1.5;
+}
+
+.background-grid {
+	position:fixed;
+	width: 1000px;
+	height:500px;
+	transform: rotate(45deg);
+	margin-left:-250px;
+	overflow: hidden;
+	z-index: -1;
+
+}
+
+.background-grid img {
+	position: absolute;
+	inset:0;
+	z-index: -1;
+	height: 100%;
+	width:100%;
+	object-fit: cover;
+	filter: url(#chromatic) brightness(0.8);
+}
+
+
+h1 {
+	color:var(--yellow);
+	font-style: 200rem;;
+	text-transform: uppercase;
+	line-height: 1;
+	font-variant-numeric: oldstyle-nums;
 }

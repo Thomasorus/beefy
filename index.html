@@ -5,10 +5,131 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Beefy Kunoichi Proof of Concept</title>
 	<link rel="stylesheet" href="assets/index.scss">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
 
-	<h1>Hello</h1>
+	<div class="background-grid">
+		<svg viewBox="0 0 1000 500">
+			<mask id="myMask">
+			    <!-- Tous les pixels blancs sont visibles -->
+			    <rect x="0" y="0" width="100" height="100" fill="white" />
+
+			    <!-- Tous les pixels noirs sont invisibles -->
+			    <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" />
+			  </mask>
+
+
+			<rect x="0" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="100" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="200" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="300" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="400" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="500" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="600" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="700" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="800" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="900" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="1000" y="0" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+
+			<rect x="0"   y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="100" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="200" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="300" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="400" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="500" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="600" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="700" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="800" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="900" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="1000" y="100" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+
+			<rect x="0"   y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="100" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="200" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="300" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="400" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="500" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="600" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="700" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="800" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="900" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="1000" y="200" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+
+			<rect x="0"   y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="100" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="200" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="300" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="400" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="500" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="600" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="700" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="800" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="900" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="1000" y="300" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+
+
+			<rect x="0"   y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="100" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="200" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="300" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="400" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="500" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="600" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="700" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="800" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="900" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+			<rect x="1000" y="400" width="100" height="100" fill="transparent" stroke="black" stroke-width="3"/>
+
+			<rect style="fill: url(#horizontal-stripes);" height="100%" width="100%" transform="rotate(-45)"></rect>
+
+			<img src="meiko-face.jpeg" alt="">
+		</svg>
+	</div>
+
+	<h1>20222 <br>01.28 <br> Start</h1>
+
+
+
+	<img style="height: 500px; position: absolute; bottom:0; right:0;" src="patreon_pts_teaser_wip1.jpg" alt="">
+
+
+
+	<svg width="0" height="0">
+	  <filter id="chromatic">
+	    <feColorMatrix type="matrix"
+	      result="red_"
+	      values="4 0 0 0 0
+	              0 0 0 0 0
+	              0 0 0 0 0
+	              0 0 0 1 0"/>
+	    <feOffset in="red_" dx="2" dy="0" result="red"/>
+	    <feColorMatrix type="matrix"
+	      in="SourceGraphic"
+	      result="blue_"
+	      values="0 0 0 0 0
+	              0 3 0 0 0
+	              0 0 10 0 0
+	              0 0 0 1 0"/>
+	    <feOffset in="blue_" dx="-3" dy="0" result="blue"/>
+	    <feBlend mode="screen" in="red" in2="blue"/>
+
+	  </filter>
+	</svg>
+
+<svg>
+	<pattern id="horizontal-stripes" patternUnits="userSpaceOnUse" width="16" height="50" >
+        <rect x="0" y="0" width="16" height="1" fill="red" fill-opacity=".25" ></rect>
+        <rect x="0" y="2" width="16" height="1" fill="red" fill-opacity=".25" ></rect>
+        <rect x="0" y="6" width="16" height="1" fill="red" fill-opacity=".25" ></rect>
+
+        <rect x="0" y="16" width="16" height="1" fill="blue" fill-opacity=".25" ></rect>
+        <rect x="0" y="3" width="16" height="1" fill="blue" fill-opacity=".25" ></rect>
+        <rect x="0" y="7" width="16" height="1" fill="blue" fill-opacity=".25" ></rect>
+
+        <rect x="0" y="0" width="16" height="1" fill="blue" fill-opacity=".25" ></rect>
+    </pattern>
+</svg>
 
 </body>
 </html>
