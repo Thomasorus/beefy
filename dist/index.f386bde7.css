@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "HelveticaBlack";
+  src: url("HelveticaBlack.d41189c5.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rockwell-ExtraBold";
+  src: url("Rockwell-ExtraBold.d40a251f.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --red: #ff424e;
+  --blue: #00adef;
+  --black: black;
+  --yellow: #feed01;
+  --square-width: 10vw;
+}
+body {
+  font-family: HelveticaBlack;
+  background-color: var(--red);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 125px);
+  grid-template-rows: repeat(5, 125px);
+  border: 4px solid black;
+  overflow: hidden;
+  transform: rotate(45deg) translate(-200px, 200px);
+  width: 875px;
+  height: 625px;
+  position: static;
+}
+.grid:after {
+  background: url("mari_aesthetic_notext.1c6434c0.jpg");
+  background-size: cover;
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(-45deg);
+}
+.grid_item {
+  position: relative;
+}
+.grid_item .tv-noise {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 140px;
+  height: 140px;
+  background: repeating-linear-gradient(#111, #111 50%, #fff 50%, #fff);
+  background-size: 5px 5px;
+  filter: url(#noise);
+  animation: rotate 5s forwards;
+  z-index: 5;
+}
+.grid_item .tv-noise--no-rotate {
+  animation: none;
+}
+.border {
+  border: 2px solid black;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 0, 180deg);
+    backface-visibility: hidden;
+  }
+}
+.main-char {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+}
+.main-char img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+h1 {
+  color: var(--yellow);
+  font-size: 10rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-variant-numeric: oldstyle-nums;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+/*# sourceMappingURL=index.f386bde7.css.map */
